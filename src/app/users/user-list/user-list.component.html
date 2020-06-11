@@ -1,0 +1,10 @@
+<a (click)="onUserSelected(user)" class="list-group-item clearfix" routerLinkActive="active"
+    style="cursor: pointer;margin-bottom: 10px;" *ngFor="let user of users">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{user.id}}</h4>
+        <p class="list-group-item-text">{{user.login}}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="user.avatar_url" alt="{{user.login}}" class="img-responsive" style="max-height: 75px;">
+    </span>
+</a>
